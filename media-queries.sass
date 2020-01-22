@@ -1,0 +1,41 @@
+// All devices
+
+@mixin all
+  @media (max-width: $breakpoint-xsmall-max)
+    @content
+
+// Small devices
+@mixin sm
+   @media (min-width: $breakpoint-small)
+     @content
+
+// Medium devices
+@mixin md
+   @media (min-width: $breakpoint-medium)
+     @content
+
+// Large devices
+@mixin lg
+  @media (min-width: $breakpoint-large)
+    @content
+      
+// Extra large devices
+@mixin xl
+   @media (min-width: $breakpoint-xlarge)
+     @content
+       
+
+       
+body, html
+  height: 100%
+  background: white
+  
+  @include all
+    
+  @include sm
+  
+  @include md
+    
+  @include lg
+    
+  @include xl
